@@ -41,6 +41,7 @@ def callback():
     except InvalidSignatureError:
         print("Invalid signature. Please check your channel access token/channelsecret.")
         abort(400)
+    return "OK"
 	
 @app.route("/good")
 def good():
