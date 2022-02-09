@@ -12,10 +12,8 @@ from linebot.models import (
     FollowEvent, MessageEvent, TextMessage, TextSendMessage, ImageMessage, ImageSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction
 )
 
-
 # 軽量なウェブアプリケーションフレームワーク:Flask
 app = Flask(__name__)
-
 
 #環境変数からLINE Access Tokenを設定
 LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
@@ -26,8 +24,7 @@ line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
 
-
-
+# LINEMessagingAPI との接続
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X‐Line‐Signature header value
@@ -42,11 +39,27 @@ def callback():
         print("Invalid signature. Please check your channel access token/channelsecret.")
         abort(400)
     return "OK"
+
+# 応答のプログラム
+@handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    """
+    LINEへのテキストメッセージに対して応答を返す
+
+    Parameters
+    ----------
+    event: MessageEvent
+      LINEに送信されたメッセージイベント
+    """
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text="応答です。 " + event.message.text))
 	
+# Flask 実行確認用
 @app.route("/good")
 def good():
 	return "Hello Heroku"
-
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT"))
