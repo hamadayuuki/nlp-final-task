@@ -1,4 +1,5 @@
 import os
+import text_generation
 
 from flask import Flask, request, abort
 
@@ -51,10 +52,12 @@ def handle_message(event):
     event: MessageEvent
       LINEに送信されたメッセージイベント
     """
+    # 100語の文字列が返ってくる
+    reply_message = text_generation.generation(event.message.text)
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text="応答です。 " + event.message.text))
+        TextSendMessage(text="応答です。 " + reply_message))
 	
 # Flask 実行確認用
 @app.route("/good")

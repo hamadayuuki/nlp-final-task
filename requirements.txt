@@ -1,2 +1,7 @@
 Flask
 line-bot-sdk
+
+tensorflow
+keras
+numpy
+
