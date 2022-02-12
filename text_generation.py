@@ -1,13 +1,5 @@
 # LSTM, 夏目漱石, 予測
-"""
-import 
-  - sys
-  - tensorflow
-  - keras
-  - numpy
-  - os
 
-"""
 import os
 import sys
 import numpy as np
@@ -62,6 +54,9 @@ def generation(message_text = "君の名前に"):
     sentences = []  # 学習データ
     next_chars = [] # 検証データ
     epochs = 80
+
+    if maxlen < 3 or 10 < maxlen:
+        return "【注意】\n入力は3〜10語にしてください。\nおすすめのワードを下に載せてます。\nぜひ試してみてください!"
 
 
     # 3文字（step）ずらしながら、学習データと検証データのリストを作成
