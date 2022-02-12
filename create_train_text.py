@@ -5,8 +5,8 @@ from urllib import request
 def scraping_text_from_aozorabunko(path):
 
     # URLからHTMLを取得
-    #url = "https://www.aozora.gr.jp/cards/000035/files/" + path + ".html"
-    url = "https://www.aozora.gr.jp/cards/000148/files/773_14560.html"
+    #url = "https://www.aozora.gr.jp/cards/000035/files/" + path + ".html"   # 太宰治
+    url = "https://www.aozora.gr.jp/cards/000148/files/773_14560.html"   # 夏目漱石「こころ」
     response = request.urlopen(url)
     soup = BeautifulSoup(response)
     main_text = soup.find('div', class_='main_text')
@@ -26,7 +26,7 @@ def scraping_text_from_aozorabunko(path):
 
 
 file_init = open('./source/train_text.txt','w',encoding='utf-8').write("")   # テキストを初期化
-#paths = ["1562_14860", "1598_18102", "273_20007", "2254_20134", "42363_15873", "2255_15060", "2256_19985", "306_20009", "304_15063", "277_33098", "278_20016"]
+#paths = ["1562_14860", "1598_18102", "273_20007", "2254_20134", "42363_15873", "2255_15060", "2256_19985", "306_20009", "304_15063", "277_33098", "278_20016"]   # 太宰治の作品
 paths = [0]
 for path in paths:
     text = scraping_text_from_aozorabunko(path)   # 文章を取得
