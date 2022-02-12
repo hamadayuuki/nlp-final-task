@@ -129,7 +129,7 @@ def generation(message_text = "君の名前に"):
             # 次の文字を予測
             preds = model.predict(x, verbose =9)[0]
             # 次の1文字のインデックス
-            next_index = self.sample(preds, diversity)
+            next_index = sample(preds, diversity)
             # 次の1文字
             next_char = indices_char[next_index]
             # 次の1文字を追加する
