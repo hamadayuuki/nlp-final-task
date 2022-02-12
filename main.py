@@ -57,7 +57,7 @@ def handle_message(event):
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text="100語文章生成しました。\nいかがでしょうか？\n\n" + reply_message + "\n\nおすすめ → 「明日は」「私は彼に言った」「ところがどっこい」\n※ 入力は3〜10文字にしてください!"))
+        TextSendMessage(text="100語文章生成しました。\nいかがでしょうか？\n\n\n" + reply_message + "\n\n\n【おすすめ】\n「明日は」「私は彼に言った」「ところがどっこい」\n\n※ 入力は3〜10文字にしてください!"))
 	
 # Flask 実行確認用
 @app.route("/good")
