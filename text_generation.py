@@ -55,7 +55,9 @@ class text_generation:
 
 
         # 学習データ(50文字)と検証データ(次の1文字)のリストを作成
-        maxlen = 3   # 学習データ文字数
+        #maxlen = 3   # 学習データ文字数
+        input_word = message_text
+        maxlen = len(message_text)
         step = 3   # 学習データの間隔
         sentences = []  # 学習データ
         next_chars = [] # 検証データ
@@ -99,7 +101,6 @@ class text_generation:
         # 学習結果を読み込む
         model.load_weights('./models/model_maxlen_' + str(maxlen) + '_epoch_' + str(epochs) + '.h5')
 
-        input_word = message_text
 
         for diversity in [0.5]:
             print()

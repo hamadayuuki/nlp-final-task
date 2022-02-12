@@ -1,7 +1,7 @@
 Flask
 line-bot-sdk
 
-tensorflow
+tensorflow-cpu
 keras
 numpy
 
