@@ -53,7 +53,6 @@ def handle_message(event):
       LINEに送信されたメッセージイベント
     """
     # 100語の文字列が返ってくる
-    call_text_generation = text_generation()
     reply_message = call_text_generation.generation(event.message.text)
 
     line_bot_api.reply_message(
