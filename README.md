@@ -6,6 +6,7 @@
 
 
 ## LINEプロフィール
+
 <img width = 500 src = "Pic/README/LINE_プロフィール.jpg">
 
 
