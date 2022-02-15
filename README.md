@@ -6,7 +6,7 @@
 
 
 ## LINEプロフィール
-<img width = 500 src = "Pic/README/LINE_プロフィール画面.jpg">
+<img width = 500 src = "Pic/README/LINE_プロフィール.jpg">
 
 
 ## LINE QRコード
