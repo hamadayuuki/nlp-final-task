@@ -7,7 +7,7 @@
 
 ## LINEプロフィール
 
-<img width = 500 src = "Pic/README/LINE_プロフィール.png">
+<img width = 500 src = "https://github.com/hamadayuuki/nlp-final-task/blob/main/Pic/README/LINE_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.png">
 
 
 ## LINE QRコード
