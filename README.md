@@ -14,11 +14,11 @@
 
 以下のQRコードを読み取るとアカウント追加できます。
 
-<img width = 350 src = "Pic/README/LINE_QRコード.png">
+<img width = 350 src = "https://github.com/hamadayuuki/nlp-final-task/blob/main/Pic/README/LINE_QR%E3%82%B3%E3%83%BC%E3%83%89.png">
 
 
 ## 実行例
 
-<img width = 300 src = "Pic/README/LINE_実行例_すまほ.jpg">
+<img width = 300 src = "https://github.com/hamadayuuki/nlp-final-task/blob/main/Pic/README/LINE_実行例_すまほ.jpg">
 
-<img width = 300 src = "Pic/README/LINE_実行例_お嬢さんに.jpg">
+<img width = 300 src = "https://github.com/hamadayuuki/nlp-final-task/blob/main/Pic/README/LINE_実行例_お嬢さんに.jpg">
